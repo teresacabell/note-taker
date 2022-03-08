@@ -16,7 +16,7 @@ router.get('/api/notes', (req, res) => {
 });
 
 // view index.html
-router.get('/notes', (req, res) => {
+router.get('api/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
@@ -27,7 +27,7 @@ router.get('*', (req, res) => {
 
 
 // POST route
-router.post('/api/notes', (req, res) => {
+router.post('/notes', (req, res) => {
     let newNote = req.body;
     notes.push(newNote);
     updateDB();
