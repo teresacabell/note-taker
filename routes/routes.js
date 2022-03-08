@@ -2,6 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const router = require('express').Router();
 
+// notes variable
+fs.readFile('db/db.json', (err, data) => {
+    if (err) throw err;
+
+    // otherwise create notes variable
+    var notes = JSON.parse(data);
+})
+
 // all posts for homepage
 router.get('/api/notes', (req, res) => {
     res.json(notes);
