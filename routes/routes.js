@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const router = requrie('express').Router();
+const router = require('express').Router();
 
 // all posts for homepage
 router.get('/api/notes', (req, res) => {
