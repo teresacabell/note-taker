@@ -73,9 +73,6 @@ app.route('/api/notes')
     res.json(newNote);
     }); 
 
-
-
-
 // app.get('/api/notes', (req, res) => {
 //     res.json(database);
 // })
