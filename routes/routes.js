@@ -11,19 +11,9 @@ fs.readFile('db/db.json', (err, data) => {
 })
 
 // all posts for homepage
-router.get('/api/notes', (req, res) => {
+router.get('./api/notes', (req, res) => {
     res.json(notes);
 });
-
-// view index.html
-router.get('api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-});
-
-// view notes.html
-router.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-})
 
 
 // POST route
